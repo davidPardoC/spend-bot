@@ -23,4 +23,5 @@ jobs:
 
             - run: |
                 supabase functions deploy --project-ref $PROJECT_ID
+                supabase migration up
                 supabase db push -p ${{ secrets.DB_PASSWORD}}
