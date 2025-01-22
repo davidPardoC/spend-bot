@@ -1,7 +1,7 @@
 import { Request, Response } from "npm:@types/express@4.17.15";
 import process from "node:process";
 import { TelegramWebhookManager } from "../managers/TelegramWebhookManager.ts";
-import { TelegramUpdateObject } from "../entities/TelegramMessage.ts";
+import { TelegramUpdateObject } from "../entities/TelegramUpdateObject.ts";
 
 export class TelegramWebhookController {
   constructor(private telegramManager: TelegramWebhookManager) {}
