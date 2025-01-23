@@ -9,6 +9,7 @@ export interface TelegramMessage {
     chat: TelegramChat;
     date: number;
     text: string;
+    photo?: TelegramPhoto[];
 }
 
 export interface TelegramUser {
@@ -26,4 +27,12 @@ export interface TelegramChat {
     last_name: string;
     username: string;
     type: string;
+}
+
+export interface TelegramPhoto {
+    file_id: string;
+    file_unique_id: string;
+    file_size: number;
+    width: number;
+    height: number;
 }
