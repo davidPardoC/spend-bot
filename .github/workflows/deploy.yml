@@ -7,7 +7,7 @@ on:
     workflow_dispatch:
 
 jobs:
-    deploy:
+    make-migrations:
         runs-on: ubuntu-latest
 
         env:
@@ -23,6 +23,5 @@ jobs:
                   version: latest
 
             - run: |
-                supabase functions deploy --project-ref $PROJECT_ID
                 supabase link --project-ref $PROJECT_ID
                 supabase db push -p $DB_PASSWORD
